@@ -1,4 +1,4 @@
-import { View, Pressable, Text, StyleSheet } from 'react-native';
+import { View, Pressable, Text, StyleSheet, Platform } from 'react-native';
 
 function CategoryGridTile({title, color}) {
  return (
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowOffset: {width: 0, height: 2},
     shadowRadius: 8,
-    overflow: 'hidden',
+    overflow: Platform.OS === 'android' ? 'hidden' : 'visible',
   },
   button: {
     flex: 1
