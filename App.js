@@ -21,7 +21,9 @@ function DrawerNavigator() {
         sceneContainerStyle: { backgroundColor: '#3f2f25' }
       }}
     >
-    <Drawer.Screen name="Categories" component={CategoriesScreen} />
+    <Drawer.Screen name="Categories" component={CategoriesScreen} options={{
+      title: 'All Categories'
+    }}/>
     <Drawer.Screen name="Favorites" component={FavoritesScreen} />
   </Drawer.Navigator>
   );
